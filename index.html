@@ -34,7 +34,7 @@ function makeName(str) {
 
 for(var demo of demos) {
 	const meta = typeof demo === 'string' ? {
-		url: demo,
+		url: demo+"/",
 		name: makeName(demo),
 		screenshot: demo + "/screenshot.png"
 	} : demo;
