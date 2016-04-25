@@ -19,15 +19,23 @@ const demos = [
 	},
 	"levenshtein-demo",
 	"convolution-demo",
-	"spectrogram-demo"
+	{
+		name:makeName("spectrogram-demo"),
+		url:"https://phiresky.github.io/kogsys-demos/spectrogram-demo/",
+		screenshot:"spectrogram-demo/screenshot.png"
+	}
 ];
+
+function makeName(str) {
+	return str.replace(/-/g, " ")
+		.replace(/\b\w/g, function(x){return x.toUpperCase();});
+}
+
 
 for(const demo of demos) {
 	const meta = typeof demo === 'string' ? {
 		url: demo,
-		name: demo
-			.replace(/-/g, " ")
-			.replace(/\b\w/g, function(x){return x.toUpperCase();}),
+		name: makeName(demo),
 		screenshot: demo + "/screenshot.png"
 	} : demo;
 	document.writeln(`
