@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="bootstrap.min.css">
 
 <div class="container">
-	<div class="page-header"><h1>Kogsys Demos</h1></div>
+	<div class="page-header"><h1>Lecture Demos</h1></div>
 <script>
 const demos = [
 	"neural-network-demo",
@@ -32,7 +32,7 @@ function makeName(str) {
 }
 
 
-for(const demo of demos) {
+for(var demo of demos) {
 	const meta = typeof demo === 'string' ? {
 		url: demo,
 		name: makeName(demo),
