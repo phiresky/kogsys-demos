@@ -1,0 +1,45 @@
+<!doctype html>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lecture Demos</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<div class="container">
+	<div class="page-header"><h1>Kogsys Demos</h1></div>
+<script>
+const demos = [
+	"neural-network-demo",
+	"gaussian-mixtures-demo",
+	{
+		name:"Perceptron Demo",
+		url:"neural-network-demo/?preset=Rosenblatt+Perceptron",
+		screenshot:"neural-network-demo/screenshot-perceptron.png"
+	},
+	"levenshtein-demo",
+	"convolution-demo",
+	"spectrogram-demo"
+];
+
+for(const demo of demos) {
+	const meta = typeof demo === 'string' ? {
+		url: demo,
+		name: demo
+			.replace(/-/g, " ")
+			.replace(/\b\w/g, function(x){return x.toUpperCase();}),
+		screenshot: demo + "/screenshot.png"
+	} : demo;
+	document.writeln(`
+	<div class="col-sm-4">
+		<a href='${meta.url}'>
+			<h3 style="text-align:center">${meta.name}</h3>
+			<img class="img-responsive img-thumbnail" src="${meta.screenshot}">
+		</a>
+	</div>
+	`);
+}
+
+</script>
+
+</div>

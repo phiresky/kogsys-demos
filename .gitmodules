@@ -1,0 +1,20 @@
+[submodule "convolution-demo"]
+	path = convolution-demo
+	url = https://github.com/phiresky/convolution-demo.git
+	branch = gh-pages
+[submodule "spectrogram-demo"]
+	path = spectrogram-demo
+	url = https://github.com/phiresky/spectrogram-demo.git
+	branch = gh-pages
+[submodule "levenshtein-demo"]
+	path = levenshtein-demo
+	url = https://github.com/phiresky/levenshtein-demo.git
+	branch = gh-pages
+[submodule "neural-network-demo"]
+	path = neural-network-demo
+	url = https://github.com/phiresky/neural-network-demo.git
+	branch = gh-pages
+[submodule "gaussian-mixtures-demo"]
+	path = gaussian-mixtures-demo
+	url = https://github.com/phiresky/gaussian-mixtures-demo.git
+	branch = gh-pages
