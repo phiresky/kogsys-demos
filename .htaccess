@@ -1,0 +1,4 @@
+# force https, because web audio api (spectrogram) needs https
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
