@@ -13,7 +13,7 @@
 if(/MSIE|Trident/.test(navigator.userAgent))
 	document.writeln('<div class="alert alert-danger"><strong>Error:</strong> Please get a real browser.</div><!--');
 
-if(!/firefox\/|chrome\//i.test(navigator.userAgent) || /Edge\//.test(navigator.userAgent))
+if(!/firefox\/|chrome\/(49|[5-9]\d|\d\d\d)/i.test(navigator.userAgent) || /Edge\//.test(navigator.userAgent))
 	document.writeln(
 		'<div class="alert alert-danger"><strong>Warning:</strong> These demos have only been tested in Chrome and Firefox.</div>'
 	);
