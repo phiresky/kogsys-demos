@@ -9,6 +9,16 @@
 <div class="container">
 	<div class="page-header"><h1>Lecture Demos</h1></div>
 <script>
+// IE can't even parse this shitty page
+if(/MSIE|Trident/.test(navigator.userAgent))
+	document.writeln('<div class="alert alert-danger"><strong>Error:</strong> Please get a real browser.</div><!--');
+
+if(!/firefox\/|chrome\//i.test(navigator.userAgent) || /Edge\//.test(navigator.userAgent))
+	document.writeln(
+		'<div class="alert alert-danger"><strong>Warning:</strong> These demos have only been tested in Chrome and Firefox.</div>'
+	);
+</script>
+<script>
 const demos = [
 	"neural-network-demo",
 	"gaussian-mixtures-demo",
@@ -26,7 +36,6 @@ function makeName(str) {
 	return str.replace(/-/g, " ")
 		.replace(/\b\w/g, function(x){return x.toUpperCase();});
 }
-
 
 for(var demo of demos) {
 	const meta = typeof demo === 'string' ? {
