@@ -21,3 +21,4 @@
 [submodule "fourier-series-demo"]
 	path = fourier-series-demo
 	url = https://github.com/phiresky/fourier-series-demo
+	branch = gh-pages
