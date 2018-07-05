@@ -22,3 +22,7 @@
 	path = fourier-series-demo
 	url = https://github.com/phiresky/fourier-series-demo
 	branch = gh-pages
+[submodule "truck-backer-upper"]
+	path = truck-backer-upper
+	url = git@github.com:TiFu/truck_backer_upper.git
+	branch = gh-pages
